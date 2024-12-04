@@ -28,10 +28,8 @@ const category = {
 };
 
 module.exports = category; 
-
-
-
-
+```
+```
 
 ## File: `backend/dataAccessLayer/customer-controller.js`
 
@@ -155,10 +153,8 @@ const customer = {
 };
 
 module.exports = customer; 
-
-
-
-
+```
+```
 
 ## File: `backend/dataAccessLayer/department-controller.js`
 
@@ -192,10 +188,8 @@ const departments = {
 }
 
 module.exports = departments; 
-
-
-
-
+```
+```
 
 ## File: `backend/dataAccessLayer/order-controller.js`
 
@@ -338,10 +332,8 @@ const order = {
 };
 
 module.exports = order; 
-
-
-
-
+```
+```
 
 ## File: `backend/dataAccessLayer/product-controller.js`
 
@@ -628,10 +620,8 @@ const product = {
 };
 
 module.exports = product; 
-
-
-
-
+```
+```
 
 ## File: `backend/dataAccessLayer/shipping-controller.js`
 
@@ -660,10 +650,8 @@ const shipping = {
 };
 
 module.exports = shipping;  
-
-
-
-
+```
+```
 
 ## File: `backend/routes/category.js`
 
@@ -678,10 +666,8 @@ const { GetCategories } = require('../dataAccessLayer/category-controller');
 router.get('/getCategories', GetCategories);
 
 module.exports = router; 
-
-
-
-
+```
+```
 
 ## File: `backend/routes/customer.js`
 
@@ -706,10 +692,8 @@ router.post('/authenticateLogin', AuthenticateLogin);
 router.get('/logout', Logout)
 
 module.exports = router; 
-
-
-
-
+```
+```
 
 ## File: `backend/routes/department.js`
 
@@ -724,10 +708,8 @@ const { GetDepartments } = require('../dataAccessLayer/department-controller');
 router.get('/getDepartments', GetDepartments);
 
 module.exports = router; 
-
-
-
-
+```
+```
 
 ## File: `backend/routes/order.js`
 
@@ -742,10 +724,8 @@ router.post('/submitOrder', CreateOrder);
 router.get('/sendTestMail', SendTestMail);
 
 module.exports = router; 
-
-
-
-
+```
+```
 
 ## File: `backend/routes/product.js`
 
@@ -775,10 +755,8 @@ router.get('/getProductDetails', GetProductDetailsById)
 
 
 module.exports = router; 
-
-
-
-
+```
+```
 
 ## File: `backend/routes/shipping.js`
 
@@ -793,10 +771,8 @@ const { GetShippingRegions } = require('../dataAccessLayer/shipping-controller')
 router.get('/getShippingRegions', GetShippingRegions);
 
 module.exports = router; 
-
-
-
-
+```
+```
 
 ## File: `backend/server.js`
 
@@ -902,10 +878,8 @@ app.use('/api/order', orderRoutes);
 app.listen(port, () => {
     console.log(`Server running on port: ${port}`);
 }); 
-
-
-
-
+```
+```
 
 ## File: `frontend/README.md`
 
@@ -939,10 +913,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 "# Simple-E-Commerce-Application" 
  
-
-
-
-
+```
+```
 
 ## File: `frontend/e2e/protractor.conf.js`
 
@@ -979,10 +951,8 @@ exports.config = {
     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
   }
 }; 
-
-
-
-
+```
+```
 
 ## File: `frontend/karma.conf.js`
 
@@ -1020,19 +990,15 @@ module.exports = function (config) {
   });
 };
  
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/app.component.html`
 
 ``` html
 <router-outlet></router-outlet> 
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/account/account.component.html`
 
@@ -1081,10 +1047,8 @@ module.exports = function (config) {
         </div>
     </div>
 </div> 
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/checkout/checkout-navbar/checkout-navbar.component.html`
 
@@ -1128,10 +1092,8 @@ module.exports = function (config) {
     </ul>
     <div class="clearfix"></div>
 </div> 
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/checkout/checkout.component.html`
 
@@ -1163,10 +1125,8 @@ module.exports = function (config) {
         </section>
     </main>
 </div> 
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/checkout/customer-info/customer-info.component.html`
 
@@ -1228,10 +1188,8 @@ module.exports = function (config) {
                 >Next</a>
         </div>
 </div> 
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/checkout/payment-info/payment-info.component.html`
 
@@ -1303,19 +1261,15 @@ module.exports = function (config) {
 </div>
 
  
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/checkout/payment-info/paypal-checkout/paypal-checkout.component.html`
 
 ``` html
 <ngx-paypal [config]="payPalConfig"></ngx-paypal> 
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/checkout/review/review.component.html`
 
@@ -1350,10 +1304,8 @@ module.exports = function (config) {
     </div>
 
 </div> 
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/home/filters/filters.component.html`
 
@@ -1447,10 +1399,8 @@ module.exports = function (config) {
  </mdb-card>
 
  <!-- Card --> 
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/home/home.component.html`
 
@@ -1485,10 +1435,8 @@ module.exports = function (config) {
 
     </div>
  </div> 
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/home/product-list/product-card/product-card.component.html`
 
@@ -1542,10 +1490,8 @@ module.exports = function (config) {
     </app-add-to-cart>
   </div>
 </div> 
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/home/product-list/product-list.component.html`
 
@@ -1594,10 +1540,8 @@ module.exports = function (config) {
       </app-pagination>
     </nav>
   <!--Section: Products v.1--> 
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/layout/app-header/app-header.component.html`
 
@@ -1679,10 +1623,8 @@ module.exports = function (config) {
 
   </div>
 </nav> 
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/layout/app-header/small-cart/small-cart.component.html`
 
@@ -1717,10 +1659,8 @@ module.exports = function (config) {
   </div>
   <li class="divider"></li>
   <li><a class="text-center btn" [routerLink]="[ '/cart/shopping-cart' ]"><strong>View Cart</strong></a></li> 
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/layout/layout.component.html`
 
@@ -1735,10 +1675,8 @@ module.exports = function (config) {
     </main>
  </div>
   
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/login/login.component.html`
 
@@ -1785,10 +1723,8 @@ s
     </div>
   </div>
 </section> 
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/order-confirmation/order-confirmation.component.html`
 
@@ -1805,10 +1741,8 @@ s
     </p>
 </div>
          
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/product-details/product-details.component.html`
 
@@ -1902,10 +1836,8 @@ s
     </div>
   </div>
 </main> 
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/register/register.component.html`
 
@@ -2067,10 +1999,8 @@ s
         </div>
     </div>
 </section> 
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/shared/add-to-cart/add-to-cart.component.html`
 
@@ -2088,10 +2018,8 @@ s
 </ng-template>
 
  
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/shared/pagination/pagination.component.html`
 
@@ -2137,10 +2065,8 @@ s
   </li>
 </ul>
  
-
-
-
-
+```
+```
 
 ## File: `frontend/src/app/components/shopping-cart/shopping-cart.component.html`
 
@@ -2283,10 +2209,8 @@ s
     <!-- End -->
   
   </div> 
-
-
-
-
+```
+```
 
 ## File: `frontend/src/index.html`
 
@@ -2308,8 +2232,6 @@ s
 <!-- <script src="/node_modules/bootstrap/js/src/toast.js"></script> -->
 </html>
  
-
-
-
-
+```
+```
 
