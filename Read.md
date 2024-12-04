@@ -27,7 +27,8 @@ const category = {
     GetCategories
 };
 
-module.exports = category; ```
+module.exports = category;
+```
 
 
 
@@ -153,7 +154,8 @@ const customer = {
     Logout
 };
 
-module.exports = customer; ```
+module.exports = customer;
+```
 
 
 
@@ -189,7 +191,8 @@ const departments = {
     GetDepartments
 }
 
-module.exports = departments; ```
+module.exports = departments;
+```
 
 
 
@@ -334,7 +337,8 @@ const order = {
     SendTestMail
 };
 
-module.exports = order; ```
+module.exports = order;
+```
 
 
 
@@ -623,7 +627,8 @@ const product = {
     GetProductDetailsById
 };
 
-module.exports = product; ```
+module.exports = product;
+```
 
 
 
@@ -654,7 +659,8 @@ const shipping = {
     GetShippingRegions
 };
 
-module.exports = shipping;  ```
+module.exports = shipping; 
+```
 
 
 
@@ -671,7 +677,8 @@ const { GetCategories } = require('../dataAccessLayer/category-controller');
 //get all departments
 router.get('/getCategories', GetCategories);
 
-module.exports = router; ```
+module.exports = router;
+```
 
 
 
@@ -698,7 +705,8 @@ router.post('/authenticateLogin', AuthenticateLogin);
 // Logout from the system
 router.get('/logout', Logout)
 
-module.exports = router; ```
+module.exports = router;
+```
 
 
 
@@ -715,7 +723,8 @@ const { GetDepartments } = require('../dataAccessLayer/department-controller');
 //get all departments
 router.get('/getDepartments', GetDepartments);
 
-module.exports = router; ```
+module.exports = router;
+```
 
 
 
@@ -732,7 +741,8 @@ const { CreateOrder, SendTestMail } = require('../dataAccessLayer/order-controll
 router.post('/submitOrder', CreateOrder);
 router.get('/sendTestMail', SendTestMail);
 
-module.exports = router; ```
+module.exports = router;
+```
 
 
 
@@ -764,7 +774,8 @@ router.post('/getFilteredProducts', GetFilteredProducts);
 router.get('/getProductDetails', GetProductDetailsById)
 
 
-module.exports = router; ```
+module.exports = router;
+```
 
 
 
@@ -781,7 +792,8 @@ const { GetShippingRegions } = require('../dataAccessLayer/shipping-controller')
 //get all Shipping Regions
 router.get('/getShippingRegions', GetShippingRegions);
 
-module.exports = router; ```
+module.exports = router;
+```
 
 
 
@@ -889,7 +901,8 @@ app.use('/api/order', orderRoutes);
 // set the app to listen on the port
 app.listen(port, () => {
     console.log(`Server running on port: ${port}`);
-}); ```
+});
+```
 
 
 
@@ -925,7 +938,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 "# Simple-E-Commerce-Application" 
- ```
+
+```
 
 
 
@@ -964,7 +978,8 @@ exports.config = {
     });
     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
   }
-}; ```
+};
+```
 
 
 
@@ -1004,7 +1019,8 @@ module.exports = function (config) {
     restartOnFileChange: true
   });
 };
- ```
+
+```
 
 
 
@@ -1012,7 +1028,8 @@ module.exports = function (config) {
 ## File: `frontend/src/app/app.component.html`
 
 ``` html
-<router-outlet></router-outlet> ```
+<router-outlet></router-outlet>
+```
 
 
 
@@ -1063,7 +1080,8 @@ module.exports = function (config) {
             </form>
         </div>
     </div>
-</div> ```
+</div>
+```
 
 
 
@@ -1109,7 +1127,8 @@ module.exports = function (config) {
 
     </ul>
     <div class="clearfix"></div>
-</div> ```
+</div>
+```
 
 
 
@@ -1143,7 +1162,8 @@ module.exports = function (config) {
             </div>
         </section>
     </main>
-</div> ```
+</div>
+```
 
 
 
@@ -1207,7 +1227,8 @@ module.exports = function (config) {
             <a class="btn btn-success " [routerLink]="['/checkout/payment-information']"
                 >Next</a>
         </div>
-</div> ```
+</div>
+```
 
 
 
@@ -1281,7 +1302,8 @@ module.exports = function (config) {
     </div>
 </div>
 
- ```
+
+```
 
 
 
@@ -1289,7 +1311,8 @@ module.exports = function (config) {
 ## File: `frontend/src/app/components/checkout/payment-info/paypal-checkout/paypal-checkout.component.html`
 
 ``` html
-<ngx-paypal [config]="payPalConfig"></ngx-paypal> ```
+<ngx-paypal [config]="payPalConfig"></ngx-paypal>
+```
 
 
 
@@ -1326,7 +1349,8 @@ module.exports = function (config) {
             routerLinkActive="active">Next</a>
     </div>
 
-</div> ```
+</div>
+```
 
 
 
@@ -1422,7 +1446,8 @@ module.exports = function (config) {
     </mdb-card-body>
  </mdb-card>
 
- <!-- Card --> ```
+ <!-- Card -->
+```
 
 
 
@@ -1459,7 +1484,8 @@ module.exports = function (config) {
        </div>
 
     </div>
- </div> ```
+ </div>
+```
 
 
 
@@ -1515,7 +1541,8 @@ module.exports = function (config) {
     <app-add-to-cart [productId]="product.ProductId" [colorId]="colorId" [sizeId]="sizeId" [isHomePage]="true">
     </app-add-to-cart>
   </div>
-</div> ```
+</div>
+```
 
 
 
@@ -1566,7 +1593,8 @@ module.exports = function (config) {
         [count]="PRODUCT_COUNT">
       </app-pagination>
     </nav>
-  <!--Section: Products v.1--> ```
+  <!--Section: Products v.1-->
+```
 
 
 
@@ -1650,7 +1678,8 @@ module.exports = function (config) {
     </div>
 
   </div>
-</nav> ```
+</nav>
+```
 
 
 
@@ -1687,7 +1716,8 @@ module.exports = function (config) {
     </table>
   </div>
   <li class="divider"></li>
-  <li><a class="text-center btn" [routerLink]="[ '/cart/shopping-cart' ]"><strong>View Cart</strong></a></li> ```
+  <li><a class="text-center btn" [routerLink]="[ '/cart/shopping-cart' ]"><strong>View Cart</strong></a></li>
+```
 
 
 
@@ -1704,7 +1734,8 @@ module.exports = function (config) {
          <router-outlet ></router-outlet>
     </main>
  </div>
-  ```
+ 
+```
 
 
 
@@ -1753,7 +1784,8 @@ s
       </div>
     </div>
   </div>
-</section> ```
+</section>
+```
 
 
 
@@ -1772,7 +1804,8 @@ s
         <a class="btn btn-success " [routerLink]="['/']" role="button">Continue to homepage</a>
     </p>
 </div>
-         ```
+        
+```
 
 
 
@@ -1868,7 +1901,8 @@ s
       </div>
     </div>
   </div>
-</main> ```
+</main>
+```
 
 
 
@@ -2032,7 +2066,8 @@ s
             </div> -->
         </div>
     </div>
-</section> ```
+</section>
+```
 
 
 
@@ -2052,7 +2087,8 @@ s
             </button>
 </ng-template>
 
- ```
+
+```
 
 
 
@@ -2100,7 +2136,8 @@ s
       </a>
   </li>
 </ul>
- ```
+
+```
 
 
 
@@ -2245,7 +2282,8 @@ s
       </div>
     <!-- End -->
   
-  </div> ```
+  </div>
+```
 
 
 
@@ -2269,7 +2307,8 @@ s
 </body>
 <!-- <script src="/node_modules/bootstrap/js/src/toast.js"></script> -->
 </html>
- ```
+
+```
 
 
 
