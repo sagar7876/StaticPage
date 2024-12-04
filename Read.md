@@ -1,5 +1,6 @@
 ## File: `backend/dataAccessLayer/category-controller.js`
 
+``` javascript
 
 const GetCategories = (request, response) => {
     try {
@@ -26,13 +27,15 @@ const category = {
     GetCategories
 };
 
-module.exports = category;
+module.exports = category; 
+
 
 
 
 
 ## File: `backend/dataAccessLayer/customer-controller.js`
 
+``` javascript
 const  firebase = require("firebase/app");
 const auth = require("firebase/auth");
 
@@ -151,13 +154,15 @@ const customer = {
     Logout
 };
 
-module.exports = customer;
+module.exports = customer; 
+
 
 
 
 
 ## File: `backend/dataAccessLayer/department-controller.js`
 
+``` javascript
 
 const GetDepartments = (request, response) => {
     try {
@@ -186,13 +191,15 @@ const departments = {
     GetDepartments
 }
 
-module.exports = departments;
+module.exports = departments; 
+
 
 
 
 
 ## File: `backend/dataAccessLayer/order-controller.js`
 
+``` javascript
 const nodemailer = require('nodemailer');
 
 const CreateOrder = (request, response) => {
@@ -330,13 +337,15 @@ const order = {
     SendTestMail
 };
 
-module.exports = order;
+module.exports = order; 
+
 
 
 
 
 ## File: `backend/dataAccessLayer/product-controller.js`
 
+``` javascript
 
 const GetProducts = (request, response) => {
     try {
@@ -618,13 +627,15 @@ const product = {
     GetProductDetailsById
 };
 
-module.exports = product;
+module.exports = product; 
+
 
 
 
 
 ## File: `backend/dataAccessLayer/shipping-controller.js`
 
+``` javascript
 const GetShippingRegions = (request, response) => {
     try {
         let query = `SELECT 
@@ -648,13 +659,15 @@ const shipping = {
     GetShippingRegions
 };
 
-module.exports = shipping; 
+module.exports = shipping;  
+
 
 
 
 
 ## File: `backend/routes/category.js`
 
+``` javascript
 
     
 const express = require('express');
@@ -664,13 +677,15 @@ const { GetCategories } = require('../dataAccessLayer/category-controller');
 //get all departments
 router.get('/getCategories', GetCategories);
 
-module.exports = router;
+module.exports = router; 
+
 
 
 
 
 ## File: `backend/routes/customer.js`
 
+``` javascript
 
     
 const express = require('express');
@@ -690,13 +705,15 @@ router.post('/authenticateLogin', AuthenticateLogin);
 // Logout from the system
 router.get('/logout', Logout)
 
-module.exports = router;
+module.exports = router; 
+
 
 
 
 
 ## File: `backend/routes/department.js`
 
+``` javascript
 
     
 const express = require('express');
@@ -706,13 +723,15 @@ const { GetDepartments } = require('../dataAccessLayer/department-controller');
 //get all departments
 router.get('/getDepartments', GetDepartments);
 
-module.exports = router;
+module.exports = router; 
+
 
 
 
 
 ## File: `backend/routes/order.js`
 
+``` javascript
 // const dotenv = require('dotenv').config();
 const express = require('express');
 const router = express.Router();
@@ -722,13 +741,15 @@ const { CreateOrder, SendTestMail } = require('../dataAccessLayer/order-controll
 router.post('/submitOrder', CreateOrder);
 router.get('/sendTestMail', SendTestMail);
 
-module.exports = router;
+module.exports = router; 
+
 
 
 
 
 ## File: `backend/routes/product.js`
 
+``` javascript
 
     
 const express = require('express');
@@ -753,13 +774,15 @@ router.post('/getFilteredProducts', GetFilteredProducts);
 router.get('/getProductDetails', GetProductDetailsById)
 
 
-module.exports = router;
+module.exports = router; 
+
 
 
 
 
 ## File: `backend/routes/shipping.js`
 
+``` javascript
 
     
 const express = require('express');
@@ -769,13 +792,15 @@ const { GetShippingRegions } = require('../dataAccessLayer/shipping-controller')
 //get all Shipping Regions
 router.get('/getShippingRegions', GetShippingRegions);
 
-module.exports = router;
+module.exports = router; 
+
 
 
 
 
 ## File: `backend/server.js`
 
+``` javascript
 const express = require('express');
 const fileUpload = require('express-fileupload');
 const bodyParser = require('body-parser');
@@ -876,13 +901,15 @@ app.use('/api/order', orderRoutes);
 // set the app to listen on the port
 app.listen(port, () => {
     console.log(`Server running on port: ${port}`);
-});
+}); 
+
 
 
 
 
 ## File: `frontend/README.md`
 
+``` markdown
 # Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
@@ -911,6 +938,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 "# Simple-E-Commerce-Application" 
+ 
 
 
 
@@ -918,6 +946,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## File: `frontend/e2e/protractor.conf.js`
 
+``` javascript
 // @ts-check
 // Protractor configuration file, see link for more information
 // https://github.com/angular/protractor/blob/master/lib/config.ts
@@ -949,13 +978,15 @@ exports.config = {
     });
     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
   }
-};
+}; 
+
 
 
 
 
 ## File: `frontend/karma.conf.js`
 
+``` javascript
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
@@ -988,6 +1019,7 @@ module.exports = function (config) {
     restartOnFileChange: true
   });
 };
+ 
 
 
 
@@ -995,13 +1027,16 @@ module.exports = function (config) {
 
 ## File: `frontend/src/app/app.component.html`
 
-<router-outlet></router-outlet>
+``` html
+<router-outlet></router-outlet> 
+
 
 
 
 
 ## File: `frontend/src/app/components/account/account.component.html`
 
+``` html
 <br>
 <br>
 
@@ -1045,13 +1080,15 @@ module.exports = function (config) {
             </form>
         </div>
     </div>
-</div>
+</div> 
+
 
 
 
 
 ## File: `frontend/src/app/components/checkout/checkout-navbar/checkout-navbar.component.html`
 
+``` html
 <h3 class="text-center">{{ activatedRoute._routerState.snapshot.url}}</h3>
 
 <div class="board-inner" id="status-buttons">
@@ -1090,13 +1127,15 @@ module.exports = function (config) {
 
     </ul>
     <div class="clearfix"></div>
-</div>
+</div> 
+
 
 
 
 
 ## File: `frontend/src/app/components/checkout/checkout.component.html`
 
+``` html
 <div>
     <header>
         <app-header #appHeader></app-header>
@@ -1123,13 +1162,15 @@ module.exports = function (config) {
             </div>
         </section>
     </main>
-</div>
+</div> 
+
 
 
 
 
 ## File: `frontend/src/app/components/checkout/customer-info/customer-info.component.html`
 
+``` html
 <div class="container mt-3">
     <div class="col-md order-md-1">
         <h4 class="mb-3">Billing Address</h4>
@@ -1186,13 +1227,15 @@ module.exports = function (config) {
             <a class="btn btn-success " [routerLink]="['/checkout/payment-information']"
                 >Next</a>
         </div>
-</div>
+</div> 
+
 
 
 
 
 ## File: `frontend/src/app/components/checkout/payment-info/payment-info.component.html`
 
+``` html
 <div class="row mt-2 mb-3">
     <div class="col-md-12">
         <div class="card ">
@@ -1259,6 +1302,7 @@ module.exports = function (config) {
     </div>
 </div>
 
+ 
 
 
 
@@ -1266,13 +1310,16 @@ module.exports = function (config) {
 
 ## File: `frontend/src/app/components/checkout/payment-info/paypal-checkout/paypal-checkout.component.html`
 
-<ngx-paypal [config]="payPalConfig"></ngx-paypal>
+``` html
+<ngx-paypal [config]="payPalConfig"></ngx-paypal> 
+
 
 
 
 
 ## File: `frontend/src/app/components/checkout/review/review.component.html`
 
+``` html
 <div class="container">
     <ul class="list-group mb-3">
         <li class="list-group-item d-flex lh-condensed" *ngFor="let product of checkoutProducts">
@@ -1302,13 +1349,15 @@ module.exports = function (config) {
             routerLinkActive="active">Next</a>
     </div>
 
-</div>
+</div> 
+
 
 
 
 
 ## File: `frontend/src/app/components/home/filters/filters.component.html`
 
+``` html
  <!-- Card -->
  <mdb-card class="m-0">
     <!--Card content-->
@@ -1397,13 +1446,15 @@ module.exports = function (config) {
     </mdb-card-body>
  </mdb-card>
 
- <!-- Card -->
+ <!-- Card --> 
+
 
 
 
 
 ## File: `frontend/src/app/components/home/home.component.html`
 
+``` html
 <div class="container">
     <div class="mt-4">
        <div class="row">
@@ -1433,13 +1484,15 @@ module.exports = function (config) {
        </div>
 
     </div>
- </div>
+ </div> 
+
 
 
 
 
 ## File: `frontend/src/app/components/home/product-list/product-card/product-card.component.html`
 
+``` html
 <div class="product-grid grid">
   <div class="product-image">
     <a [routerLink]="['product-details', product.ProductId]">
@@ -1488,13 +1541,15 @@ module.exports = function (config) {
     <app-add-to-cart [productId]="product.ProductId" [colorId]="colorId" [sizeId]="sizeId" [isHomePage]="true">
     </app-add-to-cart>
   </div>
-</div>
+</div> 
+
 
 
 
 
 ## File: `frontend/src/app/components/home/product-list/product-list.component.html`
 
+``` html
 <!--Section: Products v.1-->
 <section class="text-center pb-3 mb-5 mt-1">
     <!--Section description-->
@@ -1538,13 +1593,15 @@ module.exports = function (config) {
         [count]="PRODUCT_COUNT">
       </app-pagination>
     </nav>
-  <!--Section: Products v.1-->
+  <!--Section: Products v.1--> 
+
 
 
 
 
 ## File: `frontend/src/app/components/layout/app-header/app-header.component.html`
 
+``` html
 <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
   <div class="container">
 
@@ -1621,13 +1678,15 @@ module.exports = function (config) {
     </div>
 
   </div>
-</nav>
+</nav> 
+
 
 
 
 
 ## File: `frontend/src/app/components/layout/app-header/small-cart/small-cart.component.html`
 
+``` html
 <div class="table-responsive">
     <table class="table">
       <tbody>
@@ -1657,13 +1716,15 @@ module.exports = function (config) {
     </table>
   </div>
   <li class="divider"></li>
-  <li><a class="text-center btn" [routerLink]="[ '/cart/shopping-cart' ]"><strong>View Cart</strong></a></li>
+  <li><a class="text-center btn" [routerLink]="[ '/cart/shopping-cart' ]"><strong>View Cart</strong></a></li> 
+
 
 
 
 
 ## File: `frontend/src/app/components/layout/layout.component.html`
 
+``` html
 <div id="app">
     <header>
        <app-header #appHeader></app-header>
@@ -1673,13 +1734,15 @@ module.exports = function (config) {
          <router-outlet ></router-outlet>
     </main>
  </div>
- 
+  
+
 
 
 
 
 ## File: `frontend/src/app/components/login/login.component.html`
 
+``` html
 <section class="register-block">
   <div class="container">
     <div class="row">
@@ -1721,13 +1784,15 @@ s
       </div>
     </div>
   </div>
-</section>
+</section> 
+
 
 
 
 
 ## File: `frontend/src/app/components/order-confirmation/order-confirmation.component.html`
 
+``` html
 <div class="jumbotron text-xs-center">
     <h1 class="display-3">Thank You!</h1>
     <p class="lead">Your Payment has been recived to us. <strong>Please check your email</strong> </p>
@@ -1739,13 +1804,15 @@ s
         <a class="btn btn-success " [routerLink]="['/']" role="button">Continue to homepage</a>
     </p>
 </div>
-        
+         
+
 
 
 
 
 ## File: `frontend/src/app/components/product-details/product-details.component.html`
 
+``` html
 <!--Main layout-->
 <main class="mt-5 pt-4">
 
@@ -1834,13 +1901,15 @@ s
       </div>
     </div>
   </div>
-</main>
+</main> 
+
 
 
 
 
 ## File: `frontend/src/app/components/register/register.component.html`
 
+``` html
 <section class="register-block">
     <div class="container">
             
@@ -1997,13 +2066,15 @@ s
             </div> -->
         </div>
     </div>
-</section>
+</section> 
+
 
 
 
 
 ## File: `frontend/src/app/components/shared/add-to-cart/add-to-cart.component.html`
 
+``` html
 
 <ng-container *ngIf="isHomePage; else elseTemplate">
         <input type="number" value="1" aria-label="Search" class="form-control d-none" style="width: 100px" [(ngModel)]="quantity" >
@@ -2016,6 +2087,7 @@ s
             </button>
 </ng-template>
 
+ 
 
 
 
@@ -2023,6 +2095,7 @@ s
 
 ## File: `frontend/src/app/components/shared/pagination/pagination.component.html`
 
+``` html
 <ul class="pagination pagination-circle pg-blue justify-content-center" *ngIf="count > 0">
   <li class="page-item" 
     [ngClass]="{ 'disabled': page === 1 || loading }"
@@ -2063,6 +2136,7 @@ s
       </a>
   </li>
 </ul>
+ 
 
 
 
@@ -2070,6 +2144,7 @@ s
 
 ## File: `frontend/src/app/components/shopping-cart/shopping-cart.component.html`
 
+``` html
 <div class="px-4 px-lg-0 pt-5">
     <!-- For demo purpose -->
     
@@ -2207,13 +2282,15 @@ s
       </div>
     <!-- End -->
   
-  </div>
+  </div> 
+
 
 
 
 
 ## File: `frontend/src/index.html`
 
+``` html
 <!doctype html>
 <html lang="en">
 <head>
@@ -2230,6 +2307,7 @@ s
 </body>
 <!-- <script src="/node_modules/bootstrap/js/src/toast.js"></script> -->
 </html>
+ 
 
 
 
