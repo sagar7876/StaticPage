@@ -1,6 +1,7 @@
 ## File: `backend/dataAccessLayer/category-controller.js`
 
-$```javascript\n
+```javascript
+
 const GetCategories = (request, response) => {
     try {
         let query = `SELECT 
@@ -26,11 +27,12 @@ const category = {
     GetCategories
 };
 
-module.exports = category;\n```
+module.exports = category;
 
 ## File: `backend/dataAccessLayer/customer-controller.js`
 
-$```javascript\nconst  firebase = require("firebase/app");
+```javascript
+const  firebase = require("firebase/app");
 const auth = require("firebase/auth");
 
 var firebaseConfig = {
@@ -148,11 +150,12 @@ const customer = {
     Logout
 };
 
-module.exports = customer;\n```
+module.exports = customer;
 
 ## File: `backend/dataAccessLayer/department-controller.js`
 
-$```javascript\n
+```javascript
+
 const GetDepartments = (request, response) => {
     try {
         console.log(1)
@@ -180,11 +183,12 @@ const departments = {
     GetDepartments
 }
 
-module.exports = departments;\n```
+module.exports = departments;
 
 ## File: `backend/dataAccessLayer/order-controller.js`
 
-$```javascript\nconst nodemailer = require('nodemailer');
+```javascript
+const nodemailer = require('nodemailer');
 
 const CreateOrder = (request, response) => {
     try {
@@ -321,11 +325,12 @@ const order = {
     SendTestMail
 };
 
-module.exports = order;\n```
+module.exports = order;
 
 ## File: `backend/dataAccessLayer/product-controller.js`
 
-$```javascript\n
+```javascript
+
 const GetProducts = (request, response) => {
     try {
         let query = `SELECT TOP 10
@@ -606,11 +611,12 @@ const product = {
     GetProductDetailsById
 };
 
-module.exports = product;\n```
+module.exports = product;
 
 ## File: `backend/dataAccessLayer/shipping-controller.js`
 
-$```javascript\nconst GetShippingRegions = (request, response) => {
+```javascript
+const GetShippingRegions = (request, response) => {
     try {
         let query = `SELECT 
                         A.shipping_region_id AS 'RegionId',
@@ -633,11 +639,12 @@ const shipping = {
     GetShippingRegions
 };
 
-module.exports = shipping; \n```
+module.exports = shipping; 
 
 ## File: `backend/routes/category.js`
 
-$```javascript\n
+```javascript
+
     
 const express = require('express');
 const router = express.Router();
@@ -646,11 +653,12 @@ const { GetCategories } = require('../dataAccessLayer/category-controller');
 //get all departments
 router.get('/getCategories', GetCategories);
 
-module.exports = router;\n```
+module.exports = router;
 
 ## File: `backend/routes/customer.js`
 
-$```javascript\n
+```javascript
+
     
 const express = require('express');
 const router = express.Router();
@@ -669,11 +677,12 @@ router.post('/authenticateLogin', AuthenticateLogin);
 // Logout from the system
 router.get('/logout', Logout)
 
-module.exports = router;\n```
+module.exports = router;
 
 ## File: `backend/routes/department.js`
 
-$```javascript\n
+```javascript
+
     
 const express = require('express');
 const router = express.Router();
@@ -682,11 +691,12 @@ const { GetDepartments } = require('../dataAccessLayer/department-controller');
 //get all departments
 router.get('/getDepartments', GetDepartments);
 
-module.exports = router;\n```
+module.exports = router;
 
 ## File: `backend/routes/order.js`
 
-$```javascript\n// const dotenv = require('dotenv').config();
+```javascript
+// const dotenv = require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const { CreateOrder, SendTestMail } = require('../dataAccessLayer/order-controller');
@@ -695,11 +705,12 @@ const { CreateOrder, SendTestMail } = require('../dataAccessLayer/order-controll
 router.post('/submitOrder', CreateOrder);
 router.get('/sendTestMail', SendTestMail);
 
-module.exports = router;\n```
+module.exports = router;
 
 ## File: `backend/routes/product.js`
 
-$```javascript\n
+```javascript
+
     
 const express = require('express');
 const router = express.Router();
@@ -723,11 +734,12 @@ router.post('/getFilteredProducts', GetFilteredProducts);
 router.get('/getProductDetails', GetProductDetailsById)
 
 
-module.exports = router;\n```
+module.exports = router;
 
 ## File: `backend/routes/shipping.js`
 
-$```javascript\n
+```javascript
+
     
 const express = require('express');
 const router = express.Router();
@@ -736,11 +748,12 @@ const { GetShippingRegions } = require('../dataAccessLayer/shipping-controller')
 //get all Shipping Regions
 router.get('/getShippingRegions', GetShippingRegions);
 
-module.exports = router;\n```
+module.exports = router;
 
 ## File: `backend/server.js`
 
-$```javascript\nconst express = require('express');
+```javascript
+const express = require('express');
 const fileUpload = require('express-fileupload');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
@@ -840,11 +853,12 @@ app.use('/api/order', orderRoutes);
 // set the app to listen on the port
 app.listen(port, () => {
     console.log(`Server running on port: ${port}`);
-});\n```
+});
 
 ## File: `frontend/README.md`
 
-$```markdown\n# Frontend
+```markdown
+# Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
@@ -872,11 +886,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 "# Simple-E-Commerce-Application" 
-\n```
+
 
 ## File: `frontend/e2e/protractor.conf.js`
 
-$```javascript\n// @ts-check
+```javascript
+// @ts-check
 // Protractor configuration file, see link for more information
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
@@ -907,11 +922,12 @@ exports.config = {
     });
     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
   }
-};\n```
+};
 
 ## File: `frontend/karma.conf.js`
 
-$```javascript\n// Karma configuration file, see link for more information
+```javascript
+// Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
 module.exports = function (config) {
@@ -943,15 +959,17 @@ module.exports = function (config) {
     restartOnFileChange: true
   });
 };
-\n```
+
 
 ## File: `frontend/src/app/app.component.html`
 
-$```html\n<router-outlet></router-outlet>\n```
+```html
+<router-outlet></router-outlet>
 
 ## File: `frontend/src/app/components/account/account.component.html`
 
-$```html\n<br>
+```html
+<br>
 <br>
 
 <div class="container mt-5">
@@ -994,11 +1012,12 @@ $```html\n<br>
             </form>
         </div>
     </div>
-</div>\n```
+</div>
 
 ## File: `frontend/src/app/components/checkout/checkout-navbar/checkout-navbar.component.html`
 
-$```html\n<h3 class="text-center">{{ activatedRoute._routerState.snapshot.url}}</h3>
+```html
+<h3 class="text-center">{{ activatedRoute._routerState.snapshot.url}}</h3>
 
 <div class="board-inner" id="status-buttons">
     <ul class="nav nav-tabs" id="myTab">
@@ -1036,11 +1055,12 @@ $```html\n<h3 class="text-center">{{ activatedRoute._routerState.snapshot.url}}<
 
     </ul>
     <div class="clearfix"></div>
-</div>\n```
+</div>
 
 ## File: `frontend/src/app/components/checkout/checkout.component.html`
 
-$```html\n<div>
+```html
+<div>
     <header>
         <app-header #appHeader></app-header>
 
@@ -1066,11 +1086,12 @@ $```html\n<div>
             </div>
         </section>
     </main>
-</div>\n```
+</div>
 
 ## File: `frontend/src/app/components/checkout/customer-info/customer-info.component.html`
 
-$```html\n<div class="container mt-3">
+```html
+<div class="container mt-3">
     <div class="col-md order-md-1">
         <h4 class="mb-3">Billing Address</h4>
         <form class="needs-validation" #userDetailsForm="ngForm">
@@ -1126,11 +1147,12 @@ $```html\n<div class="container mt-3">
             <a class="btn btn-success " [routerLink]="['/checkout/payment-information']"
                 >Next</a>
         </div>
-</div>\n```
+</div>
 
 ## File: `frontend/src/app/components/checkout/payment-info/payment-info.component.html`
 
-$```html\n<div class="row mt-2 mb-3">
+```html
+<div class="row mt-2 mb-3">
     <div class="col-md-12">
         <div class="card ">
             <div class="card-header">
@@ -1196,15 +1218,17 @@ $```html\n<div class="row mt-2 mb-3">
     </div>
 </div>
 
-\n```
+
 
 ## File: `frontend/src/app/components/checkout/payment-info/paypal-checkout/paypal-checkout.component.html`
 
-$```html\n<ngx-paypal [config]="payPalConfig"></ngx-paypal>\n```
+```html
+<ngx-paypal [config]="payPalConfig"></ngx-paypal>
 
 ## File: `frontend/src/app/components/checkout/review/review.component.html`
 
-$```html\n<div class="container">
+```html
+<div class="container">
     <ul class="list-group mb-3">
         <li class="list-group-item d-flex lh-condensed" *ngFor="let product of checkoutProducts">
             <div>
@@ -1233,11 +1257,12 @@ $```html\n<div class="container">
             routerLinkActive="active">Next</a>
     </div>
 
-</div>\n```
+</div>
 
 ## File: `frontend/src/app/components/home/filters/filters.component.html`
 
-$```html\n <!-- Card -->
+```html
+ <!-- Card -->
  <mdb-card class="m-0">
     <!--Card content-->
     <mdb-card-body>
@@ -1325,11 +1350,12 @@ $```html\n <!-- Card -->
     </mdb-card-body>
  </mdb-card>
 
- <!-- Card -->\n```
+ <!-- Card -->
 
 ## File: `frontend/src/app/components/home/home.component.html`
 
-$```html\n<div class="container">
+```html
+<div class="container">
     <div class="mt-4">
        <div class="row">
           <div class="col-4">
@@ -1358,11 +1384,12 @@ $```html\n<div class="container">
        </div>
 
     </div>
- </div>\n```
+ </div>
 
 ## File: `frontend/src/app/components/home/product-list/product-card/product-card.component.html`
 
-$```html\n<div class="product-grid grid">
+```html
+<div class="product-grid grid">
   <div class="product-image">
     <a [routerLink]="['product-details', product.ProductId]">
       <img class="pic-1" [src]="'/assets/product_images/' + product.PrimaryImage">
@@ -1410,11 +1437,12 @@ $```html\n<div class="product-grid grid">
     <app-add-to-cart [productId]="product.ProductId" [colorId]="colorId" [sizeId]="sizeId" [isHomePage]="true">
     </app-add-to-cart>
   </div>
-</div>\n```
+</div>
 
 ## File: `frontend/src/app/components/home/product-list/product-list.component.html`
 
-$```html\n<!--Section: Products v.1-->
+```html
+<!--Section: Products v.1-->
 <section class="text-center pb-3 mb-5 mt-1">
     <!--Section description-->
     <p class="grey-text pb-1 font-weight-normal font-italic">
@@ -1457,11 +1485,12 @@ $```html\n<!--Section: Products v.1-->
         [count]="PRODUCT_COUNT">
       </app-pagination>
     </nav>
-  <!--Section: Products v.1-->\n```
+  <!--Section: Products v.1-->
 
 ## File: `frontend/src/app/components/layout/app-header/app-header.component.html`
 
-$```html\n<nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+```html
+<nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
   <div class="container">
 
     <!-- Brand -->
@@ -1537,11 +1566,12 @@ $```html\n<nav class="navbar fixed-top navbar-expand-lg navbar-light white scrol
     </div>
 
   </div>
-</nav>\n```
+</nav>
 
 ## File: `frontend/src/app/components/layout/app-header/small-cart/small-cart.component.html`
 
-$```html\n<div class="table-responsive">
+```html
+<div class="table-responsive">
     <table class="table">
       <tbody>
         <tr *ngFor="let product of cart">
@@ -1570,11 +1600,12 @@ $```html\n<div class="table-responsive">
     </table>
   </div>
   <li class="divider"></li>
-  <li><a class="text-center btn" [routerLink]="[ '/cart/shopping-cart' ]"><strong>View Cart</strong></a></li>\n```
+  <li><a class="text-center btn" [routerLink]="[ '/cart/shopping-cart' ]"><strong>View Cart</strong></a></li>
 
 ## File: `frontend/src/app/components/layout/layout.component.html`
 
-$```html\n<div id="app">
+```html
+<div id="app">
     <header>
        <app-header #appHeader></app-header>
  
@@ -1583,11 +1614,12 @@ $```html\n<div id="app">
          <router-outlet ></router-outlet>
     </main>
  </div>
- \n```
+ 
 
 ## File: `frontend/src/app/components/login/login.component.html`
 
-$```html\n<section class="register-block">
+```html
+<section class="register-block">
   <div class="container">
     <div class="row">
       <div class="col-md-4 register-sec">
@@ -1628,11 +1660,12 @@ s
       </div>
     </div>
   </div>
-</section>\n```
+</section>
 
 ## File: `frontend/src/app/components/order-confirmation/order-confirmation.component.html`
 
-$```html\n<div class="jumbotron text-xs-center">
+```html
+<div class="jumbotron text-xs-center">
     <h1 class="display-3">Thank You!</h1>
     <p class="lead">Your Payment has been recived to us. <strong>Please check your email</strong> </p>
     <hr>
@@ -1643,11 +1676,12 @@ $```html\n<div class="jumbotron text-xs-center">
         <a class="btn btn-success " [routerLink]="['/']" role="button">Continue to homepage</a>
     </p>
 </div>
-        \n```
+        
 
 ## File: `frontend/src/app/components/product-details/product-details.component.html`
 
-$```html\n<!--Main layout-->
+```html
+<!--Main layout-->
 <main class="mt-5 pt-4">
 
   <div class="container dark-grey-text mt-5">
@@ -1735,11 +1769,12 @@ $```html\n<!--Main layout-->
       </div>
     </div>
   </div>
-</main>\n```
+</main>
 
 ## File: `frontend/src/app/components/register/register.component.html`
 
-$```html\n<section class="register-block">
+```html
+<section class="register-block">
     <div class="container">
             
         <div class="row register-sec">
@@ -1895,11 +1930,12 @@ $```html\n<section class="register-block">
             </div> -->
         </div>
     </div>
-</section>\n```
+</section>
 
 ## File: `frontend/src/app/components/shared/add-to-cart/add-to-cart.component.html`
 
-$```html\n
+```html
+
 <ng-container *ngIf="isHomePage; else elseTemplate">
         <input type="number" value="1" aria-label="Search" class="form-control d-none" style="width: 100px" [(ngModel)]="quantity" >
         <button class="add-to-cart" (click)="onAddProductToCart()">ADD TO CART</button>
@@ -1911,11 +1947,12 @@ $```html\n
             </button>
 </ng-template>
 
-\n```
+
 
 ## File: `frontend/src/app/components/shared/pagination/pagination.component.html`
 
-$```html\n<ul class="pagination pagination-circle pg-blue justify-content-center" *ngIf="count > 0">
+```html
+<ul class="pagination pagination-circle pg-blue justify-content-center" *ngIf="count > 0">
   <li class="page-item" 
     [ngClass]="{ 'disabled': page === 1 || loading }"
     (click)="onPage(1)" >
@@ -1955,11 +1992,12 @@ $```html\n<ul class="pagination pagination-circle pg-blue justify-content-center
       </a>
   </li>
 </ul>
-\n```
+
 
 ## File: `frontend/src/app/components/shopping-cart/shopping-cart.component.html`
 
-$```html\n<div class="px-4 px-lg-0 pt-5">
+```html
+<div class="px-4 px-lg-0 pt-5">
     <!-- For demo purpose -->
     
     <div class="pb-5">
@@ -2096,11 +2134,12 @@ $```html\n<div class="px-4 px-lg-0 pt-5">
       </div>
     <!-- End -->
   
-  </div>\n```
+  </div>
 
 ## File: `frontend/src/index.html`
 
-$```html\n<!doctype html>
+```html
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -2116,5 +2155,5 @@ $```html\n<!doctype html>
 </body>
 <!-- <script src="/node_modules/bootstrap/js/src/toast.js"></script> -->
 </html>
-\n```
+
 
